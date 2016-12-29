@@ -1,14 +1,20 @@
-program untitled; //I know that it is very silly program but these type programs are understandable for beginners..
+program untitled;
 var
-a,b:Integer;
+N,toplam,sayi,sayac:Integer;
+ort:Real;
+Begin
+writeln('Kac tane sayinin ortalamasini Istiyorsun');
+readln(N);
+
+toplam:=0;
+
+for sayac:=1 to N do
 begin
-writeln('Insert the numbers that you want to compare');
-readln(a,b);
-if a>b then
-writeln(a,' is greater then ',b)
-else if a<b then
-writeln(a,' is smaller than ',b)
-else
-writeln(a,' is equal to ',b);
-readln();
+writeln('Sayi giriniz:');
+readln(sayi);
+toplam:= toplam + sayi;
+end;
+ort:=toplam DIV N;
+writeln(ort:5:3);
+
 end.

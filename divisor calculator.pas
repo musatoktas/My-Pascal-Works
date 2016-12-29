@@ -1,20 +1,30 @@
 program untitled;
 var
-n:Integer;
+ch:Char;
 begin
-writeln('Insert your test score');
-readln(n);
-if n>=50 then
-   if n>=75 then
-   writeln('Your Grade is A')
-   else
-   writeln('Your Grade is B')
-else
-    if n>=25 then
-    writeln('Your Grade is C')
-    else
-    writeln('Your Grade is D');
-
+for ch:='A' to 'F' do
+begin
+write(ch,' ');
+end;
 readln();
+end.
+program untitled;
+var
+N,toplam,sayi,sayac:Integer;
+Begin
+writeln('Kac tane sayinin ortalamasini Istiyorsun')
+readln(N);
+
+toplam:=0;
+
+for sayac:1 to N do
+begin
+writeln('Sayi giriniz:');
+readln(sayi);
+toplam:= toplam + sayi;
+end;
+ort:=toplam/N;
+writeln(ort);
+
 end.
 
